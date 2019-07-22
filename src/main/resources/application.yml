@@ -1,0 +1,29 @@
+server:
+  port: 8080
+spring:
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://49.234.8.168:3306/url?characterEncoding=utf8&useSSL=false&autoReconnect=true&failOverReadOnly=false
+    username: root
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    enabled: true
+
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+
+
+
